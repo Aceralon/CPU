@@ -25,15 +25,15 @@ module PC(
     input  logic [31:0] nextPC,
     input  logic        PCWre,
     input  logic        reset,
-    output logic [31:0] currentPC
+    output logic [31:0] curPC
     );
 
     always_ff @ (posedge clk)
     begin
-        if(reset == 0)
-            currentPC <= 0;
+        if(reset == 1'b0)
+            curPC <= 0;
         else if(PCWre)
-            currentPC <= nextPC;
+            curPC <= nextPC;
     end
     
 endmodule

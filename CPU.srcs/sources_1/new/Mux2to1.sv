@@ -21,6 +21,18 @@
 
 
 module Mux2to1(
-
+    input  logic        SelSig,
+    input  logic [31:0] zero,
+    input  logic [31:0] one,
+    input  logic [31:0] out
     );
+
+    always_comb
+    begin
+        case(SelSig)
+            1'b0 : out = zero;
+            1'b1 : out = one;
+        endcase
+    end
+
 endmodule

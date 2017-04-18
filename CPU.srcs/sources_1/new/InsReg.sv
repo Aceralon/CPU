@@ -21,6 +21,24 @@
 
 
 module InsReg(
-
+    input  logic [31:0] PC,
+    input  logic        InsMemRW,
+    output logic [31:0] InsOut
     );
+
+    logic [7:0] InsMem [0:255];
+
+    initial
+    begin
+        $readmemb("<数据文件名>",InsMem);
+    end
+
+    always_comb
+    begin
+        if (InsMemRW == 1'b1)
+        begin
+            InsOut = {InsMem[PC], InsMem[PC+1], InsMem[PC+2], InsMem[PC+3]};    
+        end
+    end
+
 endmodule
