@@ -21,6 +21,18 @@
 
 
 module Register(
-
+    input  logic        clk,
+    input  logic        RegWre,
+    input  logic [4:0]  ReadReg1,
+    input  logic [4:0]  ReadReg2,
+    input  logic [4:0]  WriteReg,
+    input  logic [31:0] WriteData,
+    output logic [31:0] ReadData1,
+    output logic [31:0] ReadData2
     );
+
+    logic [31:0] Reg [0:31];
+
+    
+
 endmodule

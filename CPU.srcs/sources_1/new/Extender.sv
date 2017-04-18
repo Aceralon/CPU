@@ -21,15 +21,17 @@
 
 
 module Extender(
+    input  logic        ExtSel,
     input  logic [15:0] in,
     output logic [31:0] out
     );
 
     always_comb
     begin
-        case(in[15])
-            1b'0 : out = {16{1'b0},in};
-            1'b1 : out = {16{1'b1},in};
+        casex({ExtSel, in[15]})
+            2'b0x : out = {16 {1'b0}, in};
+            2'b10 : out = {16 {1'b0}, in};
+            2'b11 : out = {16 {1'b1}, in};
         endcase
     end
 
