@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: PC
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys 3
 // Tool Versions: 
 // Description: 
 // 
@@ -21,6 +21,19 @@
 
 
 module PC(
-    input clk
+    input  logic        clk,
+    input  logic [31:0] nextPC,
+    input  logic        PCWre,
+    input  logic        reset,
+    output logic [31:0] currentPC
     );
+
+    always_ff @ (posedge clk)
+    begin
+        if(reset == 0)
+            currentPC <= 0;
+        else if(PCWre)
+            currentPC <= nextPC;
+    end
+    
 endmodule
