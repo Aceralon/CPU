@@ -37,11 +37,11 @@ module DataReg(
             2'b00 : 
                 DataOut <= 32'bz;
             2'b01 :
-                DataOut <= {DataMem[DataAddr+3], DataMem[DataAddr+2], DataMem[DataAddr+1], DataMem[DataAddr]};
+                DataOut <= {DataMem[DataAddr], DataMem[DataAddr+1], DataMem[DataAddr+2], DataMem[DataAddr+3]};
             2'b10 :
             begin
                 DataOut <= 32'bz;
-                {DataMem[DataAddr+3], DataMem[DataAddr+2], DataMem[DataAddr+1], DataMem[DataAddr]} <= DataIn;
+                {DataMem[DataAddr], DataMem[DataAddr+1], DataMem[DataAddr+2], DataMem[DataAddr+3]} <= DataIn;
             end
             2'b11 :
                 DataOut <= 32'bz;

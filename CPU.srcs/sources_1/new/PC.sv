@@ -34,6 +34,8 @@ module PC(
             curPC <= 0;
         else if(PCWre)
             curPC <= nextPC;
+        else
+            curPC <= curPC
     end
     
 endmodule
