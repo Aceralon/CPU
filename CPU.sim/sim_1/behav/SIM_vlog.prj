@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/ShifterL.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/Register.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/PC.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/Mux2to1.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/InsReg.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/Extender.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/DataReg.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/CtrUnit.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/ALU.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/Adder.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/SCPU.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sim_1/new/SIM.sv"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

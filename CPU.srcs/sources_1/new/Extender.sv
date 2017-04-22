@@ -29,9 +29,9 @@ module Extender(
     always_comb
     begin
         casex({ExtSel, in[15]})
-            2'b0x : out = {16 {1'b0}, in};
-            2'b10 : out = {16 {1'b0}, in};
-            2'b11 : out = {16 {1'b1}, in};
+            2'b0x : out = {{16 {1'b0}}, in};
+            2'b10 : out = {{16 {1'b0}}, in};
+            2'b11 : out = {{16 {1'b1}}, in};
         endcase
     end
 

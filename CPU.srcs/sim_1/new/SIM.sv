@@ -3,11 +3,11 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/04/17 20:57:06
+// Create Date: 2017/04/19 21:09:39
 // Design Name: 
-// Module Name: PC
+// Module Name: SIM
 // Project Name: 
-// Target Devices: Basys 3
+// Target Devices: 
 // Tool Versions: 
 // Description: 
 // 
@@ -20,22 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PC(
-    input  logic        clk,
-    input  logic [31:0] nextPC,
-    input  logic        PCWre,
-    input  logic        reset,
-    output logic [31:0] curPC
+module SIM(
     );
 
-    always_ff @ (posedge clk)
-    begin
-        if(reset == 1'b0)
-            curPC <= 0;
-        else if(PCWre)
-            curPC <= nextPC;
-        else
-            curPC <= curPC;
-    end
+    logic clk;
+    logic reset;
+
+    SCPU myCPU(
+        .clk(clk),
+        .reset(reset)
+    );
     
+    always #30 clk = ~clk;
+
+    initial 
+    begin
+        clk = 0;
+        reset = 0;
+
+        #60
+
+        reset = 1;
+    end
+
 endmodule

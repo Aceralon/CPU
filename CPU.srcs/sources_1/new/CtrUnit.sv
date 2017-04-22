@@ -36,6 +36,22 @@ module CtrUnit(
     output logic [2:0] ALUOp
     );
 
+
+    assign PCWre = !(Ins == 6'b111111);
+    assign ALUSrcB = (Ins == 6'b000001 || Ins == 6'b010000 || Ins == 6'b100110 || Ins == 6'b100111);
+    assign DBDataSrc = (Ins == 6'b100111);
+    assign RegWre = !(Ins == 6'b100110 || Ins == 6'b110000 || Ins == 6'b111111);
+    assign InsMemRW = 1;
+    assign RD = !(Ins == 6'b100111);
+    assign WR = !(Ins == 6'b100110);
+    assign ExtSel = !(Ins == 6'b000001 || Ins == 6'b010000);
+    assign RegDst = !(Ins == 6'b000001 || Ins == 6'b010000 || Ins == 6'b100111);
+    assign PCSrc = (Ins == 6'b110000 && zero==0);
+    assign ALUOp[2] = (Ins == 6'b010001);
+    assign ALUOp[1] = (Ins == 6'b010000 || Ins == 6'b1010010);
+    assign ALUOp[0] = (Ins == 6'b000010 || Ins == 6'b010000 || Ins == 6'b1010010 || Ins == 6'b110000);
+
+
     /*always_comb  : InstructionContrl
     begin
         case(Ins)
@@ -197,22 +213,5 @@ module CtrUnit(
                 ALUOp <= 3'b000;
             end
     end*/
-
-    assign
-    begin
-        PCWre = !(Ins == 6'b111111);
-        ALUSrcB = (Ins == 6'b000001 || Ins == 6'b010000, || Ins == 6'b100110 || Ins == 6'b100111);
-        DBDataSrc = (Ins == 6'b100111);
-        RegWre = !(Ins == 6'b100110 || Ins == 6'b110000 || Ins == 6'b111111);
-        InsMemRW = 1;
-        RD = !(Ins == 6'b100111);
-        WR = !(Ins == 6'b100110);
-        ExtSel = !(Ins == 6'b000001 || Ins == 6'b010000);
-        RegDst = !(Ins == 6'b000001 || Ins == 6'b010000 || Ins == 6'b100111);
-        PCSrc = !(Ins == 6'b110000 && !zero);
-        ALUOp[2] = (Ins == 6'b010001); 
-        ALUOp[1] = (Ins == 6'b010000);
-        ALUOp[0] = (Ins == 6'b000010 || Ins == 6'b010000);
-    end
-
+    
 endmodule

@@ -21,8 +21,8 @@
 
 
 module ALU(
-    input  logic [31:0] a,
-    input  logic [31:0] b,
+    input  logic [31:0] ALUA,
+    input  logic [31:0] ALUB,
     input  logic [2:0]  ALUOp,
     output logic [31:0] result,
     output logic        zero 
@@ -31,18 +31,22 @@ module ALU(
     always_comb
     begin
         case(ALUOp)
-            3'b000 : result = a + b;
-            3'b001 : result = a - b;
-            3'b010 : result = b << a;
-            3'b011 : result = a | b;
-            3'b100 : result = a & b;
-            3'b101 : result = ~a & b;
-            3'b110 : result = a ^ b;
-            3'b111 : result = a ~^ b;
+            3'b000 : result = ALUA + ALUB;
+            3'b001 : result = ALUA - ALUB;
+            3'b010 : result = ALUB << ALUA;
+            3'b011 : result = ALUA | ALUB;
+            3'b100 : result = ALUA & ALUB;
+            3'b101 : result = ~ALUA & ALUB;
+            3'b110 : result = ALUA ^ ALUB;
+            3'b111 : result = ALUA ~^ ALUB;
         endcase
+        if(result == 0)
+            zero = 1;
+        else
+            zero = 0;
     end
 
-    assign
-        zero = result == 32'b0 ? 1:0;
+ //   assign
+   //     zero = (result == 32'b0 ? 1:0);
 
 endmodule

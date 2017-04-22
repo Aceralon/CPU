@@ -30,7 +30,7 @@ module InsReg(
 
     initial
     begin
-        $readmemb("<数据文件名>",InsMem);
+        $readmemh("Inst.mem",InsMem);
     end
 
     always_comb
@@ -39,6 +39,7 @@ module InsReg(
         begin
             InsOut = {InsMem[PC], InsMem[PC+1], InsMem[PC+2], InsMem[PC+3]};    
         end
+        $display("instMem PC", PC, "INST: ", InsOut);
     end
 
 endmodule

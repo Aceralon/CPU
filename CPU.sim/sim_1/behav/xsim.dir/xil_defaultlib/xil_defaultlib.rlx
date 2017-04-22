@@ -1,0 +1,17 @@
+0.6
+2016.4
+Jan 23 2017
+19:37:30
+C:/Users/acera/Documents/GitHub/CPU/CPU.sim/sim_1/behav/glbl.v,1485222234,verilog,,,,glbl,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sim_1/new/SIM.sv,1492831990,systemVerilog,,,,SIM,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv,1492835373,systemVerilog,,,,ALU,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Adder.sv,1492525004,systemVerilog,,,,Adder,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/CtrUnit.sv,1492838388,systemVerilog,,,,CtrUnit,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/DataReg.sv,1492839542,systemVerilog,,,,DataReg,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Extender.sv,1492602060,systemVerilog,,,,Extender,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv,1492834504,systemVerilog,,,,InsReg,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Mux2to1.sv,1492733955,systemVerilog,,,,Mux2to1,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv,1492601659,systemVerilog,,,,PC,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Register.sv,1492838844,systemVerilog,,,,Register,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv,1492837291,systemVerilog,,,,SCPU,,,,,,,,
+C:/Users/acera/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ShifterL.sv,1492525004,systemVerilog,,,,ShifterL,,,,,,,,

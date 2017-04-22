@@ -31,20 +31,24 @@ module DataReg(
 
     logic [7:0] DataMem [0:255];
 
-    always_ff (negedge clk)
+    always_ff @ (negedge clk)
     begin
-        case({RD, WR})
-            2'b00 : 
-                DataOut <= 32'bz;
-            2'b01 :
-                DataOut <= {DataMem[DataAddr], DataMem[DataAddr+1], DataMem[DataAddr+2], DataMem[DataAddr+3]};
-            2'b10 :
+        case(WR)   
+            0 :
             begin
                 DataOut <= 32'bz;
-                {DataMem[DataAddr], DataMem[DataAddr+1], DataMem[DataAddr+2], DataMem[DataAddr+3]} <= DataIn;
+                {DataMem[4*DataAddr], DataMem[4*DataAddr+1], DataMem[4*DataAddr+2], DataMem[4*DataAddr+3]} <= DataIn;
             end
-            2'b11 :
+            1 :
                 DataOut <= 32'bz;
+        endcase
+    end
+
+    always_comb
+    begin
+        case(RD)
+            0 : DataOut <= {DataMem[4*DataAddr], DataMem[4*DataAddr+1], DataMem[4*DataAddr+2], DataMem[4*DataAddr+3]};
+            1 : DataOut <= 32'bz;
         endcase
     end
 

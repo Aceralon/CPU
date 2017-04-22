@@ -33,17 +33,16 @@ module Register(
 
     logic [31:0] Reg [0:31];
 
-    always_ff (negedge clk)
+    initial
+        Reg[0] = 32'b0;
+
+    assign ReadData1 = Reg[ReadReg1];
+    assign ReadData2 = Reg[ReadReg2];
+
+    always_ff @ (negedge clk)
     begin
         if (RegWre)
-        begin
-            Reg[{26 {1'b0}, WriteReg}] <= WriteData;
-        end
-        else
-        begin
-            ReadData1 <= Reg[{26 {1'b0}, ReadReg1}];
-            ReadData2 <= Reg[{26 {1'b0}, ReadReg2}];
-        end
+            Reg[WriteReg] <= WriteData;
     end
 
 endmodule
