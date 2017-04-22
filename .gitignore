@@ -14,6 +14,8 @@
 *.tcl
 *.jou
 *.exe
-*.mem
 *.reloc
 *.rtti
+*.mem
+!Inst.mem
+/CPU.sim/*
