@@ -30,6 +30,7 @@ module btnDebounce(
 	logic [4:0] delay2;
 	logic [4:0] delay3;
 	logic [4:0] delay4;
+	logic [4:0] delay5;
 	
 	always_ff @ (posedge clk256)
 	begin
@@ -37,8 +38,9 @@ module btnDebounce(
 		delay2 <= delay1;
 		delay3 <= delay2;
 		delay4 <= delay3;
+		delay5 <= delay4;
 	end
 	
-	assign btnOut = btnIn & delay1 & delay2 & delay3 & delay4;
+	assign btnOut = btnIn & delay1 & delay2 & delay3 & delay4 & delay5;
 	
 endmodule

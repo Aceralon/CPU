@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Tue Apr 25 13:27:19 2017
+| Date         : Tue Apr 25 13:33:28 2017
 | Host         : DESKTOP-JOE running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Basys_timing_summary_routed.rpt -rpx Basys_timing_summary_routed.rpx
 | Design       : Basys
@@ -74,7 +74,11 @@ Table of Contents
 
  There are 2151 register/latch pins with no clock driven by root clock pin: myBtn/delay4_reg[4]/Q (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: myClkDiv/clk256_reg/Q (HIGH)
+ There are 2151 register/latch pins with no clock driven by root clock pin: myBtn/delay5_reg[0]/Q (HIGH)
+
+ There are 2151 register/latch pins with no clock driven by root clock pin: myBtn/delay5_reg[4]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: myClkDiv/clk256_reg/Q (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: myClkDiv/cnt_reg[15]/Q (HIGH)
 
@@ -91,7 +95,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 4832 pins that are not constrained for maximum delay. (HIGH)
+ There are 4834 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
