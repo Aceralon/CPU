@@ -17,5 +17,7 @@
 *.reloc
 *.rtti
 *.mem
+*.bin
+*.bit
 !Inst.mem
 /CPU.sim/*

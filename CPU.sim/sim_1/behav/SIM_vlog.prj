@@ -10,7 +10,12 @@ sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/CtrUnit.sv"
 sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/ALU.sv"
 sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/Adder.sv"
 sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/SCPU.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/Basys.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/btnDebounce.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/clkDiv.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sources_1/new/display.sv"
 sv xil_defaultlib  "../../../CPU.srcs/sim_1/new/SIM.sv"
+sv xil_defaultlib  "../../../CPU.srcs/sim_1/new/BasysSim.sv"
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

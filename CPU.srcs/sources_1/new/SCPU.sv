@@ -20,24 +20,26 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module SCPU(
-    input logic clk,
-    input logic reset
+    input  logic clk,
+    input  logic reset,
+    output logic [31:0] curPC,
+    output logic [31:0] nextPC,
+    output logic [31:0] ALUResult, //alu output
+    output logic [31:0] DataOut,   //DB databus
+    output logic [31:0] ALUA,      //alua
+    output logic [31:0] ALUB,      //alub
+    output logic [4:0]  rs,
+    output logic [4:0]  rt
     );
 
     logic [31:0] InsOut;
     logic [31:0] WriteReg;
-    logic [31:0] curPC;
-    logic [31:0] nextPC;
     logic [31:0] AddedPC;
     logic [31:0] WriteData;
-    logic [31:0] ALUA;
     logic [31:0] ReadData2;
     logic [31:0] Extended;
-    logic [31:0] ALUB;
-    logic [31:0] ALUResult;
     logic [31:0] Shifted;
     logic [31:0] jAddr;
-    logic [31:0] DataOut;
 
     logic        zero;
 
@@ -53,6 +55,9 @@ module SCPU(
     logic        RegDst;
     logic        PCSrc;
     logic  [2:0] ALUOp;
+
+    assign rs = InsOut[25:21];
+    assign rt = InsOut[20:16];
 
     PC myPC(
         .clk(clk),

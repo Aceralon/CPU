@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/04/19 21:09:39
+// Create Date: 2016/12/20 09:25:41
 // Design Name: 
-// Module Name: SIM
+// Module Name: clk_div
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,27 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SIM(
-    );
-
-    logic clk;
-    logic reset;
-
-    SCPU myCPU(
-        .clk(clk),
-        .reset(reset)
+module clkDiv(
+    input  logic        mainClk,
+    output logic        clk256,
+    output logic [31:0] cnt
     );
     
-    always #30 clk = ~clk;
+    logic [31:0] cnt;
+    logic        clk;
 
-    initial 
+    initial
     begin
+        cnt = 0;
         clk = 0;
-        reset = 0;
-
-        #40
-
-        reset = 1;
     end
-
+    
+    always_ff @ (posedge mainClk) 
+        if(cnt < 390625)
+            cnt <= cnt + 1;
+        else
+        begin
+            clk256 <= ~clk256;
+            cnt <= 0;
+        end
+    
 endmodule

@@ -28,7 +28,7 @@ module PC(
     output logic [31:0] curPC
     );
 
-    always_ff @ (posedge clk)
+    always_ff @ (posedge clk, negedge reset)
     begin
         if(reset == 1'b0)
             curPC <= 0;

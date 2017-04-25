@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/04/19 21:09:39
+// Create Date: 2017/04/22 19:13:29
 // Design Name: 
-// Module Name: SIM
+// Module Name: BasysSim
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,27 +20,33 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SIM(
+module BasysSim(
     );
 
-    logic clk;
-    logic reset;
+    logic       clk;
+    logic [0:4] btn;
+    logic [0:6] seg;
+    logic [0:3] posSeg;
 
-    SCPU myCPU(
-        .clk(clk),
-        .reset(reset)
+    Basys myBasys(
+        .mainClk(clk),
+        .butnIn(btn),
+        .seg(seg),
+        .posSeg(posSeg)
     );
-    
-    always #30 clk = ~clk;
 
-    initial 
+    always
+    begin
+        #1 clk = ~clk;
+        #10 btn[4] = ~btn[4];
+    end
+
+    initial
     begin
         clk = 0;
-        reset = 0;
+        btn[4] = 1;
 
-        #40
-
-        reset = 1;
+        #60;
     end
 
 endmodule
