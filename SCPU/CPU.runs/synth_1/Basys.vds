@@ -1,0 +1,571 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed Apr 26 08:06:35 2017
+# Process ID: 7216
+# Current directory: C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1
+# Command line: vivado.exe -log Basys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Basys.tcl
+# Log file: C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1/Basys.vds
+# Journal file: C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Basys.tcl -notrace
+Command: synth_design -top Basys -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti-cpg236'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti-cpg236'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4816 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 296.730 ; gain = 77.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Basys' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Basys.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SCPU' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:22]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'PC' (1#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv:23]
+INFO: [Synth 8-638] synthesizing module 'InsReg' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:23]
+INFO: [Synth 8-3876] $readmem data file 'Inst.mem' is read successfully [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:33]
+INFO: [Synth 8-256] done synthesizing module 'InsReg' (2#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Adder' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Adder.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Adder' (3#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Adder.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Mux2to1' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Mux2to1.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Mux2to1' (4#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Mux2to1.sv:23]
+WARNING: [Synth 8-689] width (5) of port connection 'zero' does not match port width (32) of module 'Mux2to1' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:84]
+WARNING: [Synth 8-689] width (5) of port connection 'one' does not match port width (32) of module 'Mux2to1' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:85]
+INFO: [Synth 8-638] synthesizing module 'Register' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Register.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Register' (5#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Register.sv:23]
+WARNING: [Synth 8-689] width (32) of port connection 'WriteReg' does not match port width (5) of module 'Register' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:94]
+INFO: [Synth 8-638] synthesizing module 'Extender' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Extender.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Extender' (6#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Extender.sv:23]
+INFO: [Synth 8-638] synthesizing module 'CtrUnit' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/CtrUnit.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'CtrUnit' (7#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/CtrUnit.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (8#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShifterL' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ShifterL.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ShifterL' (9#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ShifterL.sv:23]
+INFO: [Synth 8-638] synthesizing module 'DataReg' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/DataReg.sv:23]
+WARNING: [Synth 8-4767] Trying to implement RAM 'DataMem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "DataMem_reg" dissolved into registers
+INFO: [Synth 8-256] done synthesizing module 'DataReg' (10#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/DataReg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'SCPU' (11#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:22]
+INFO: [Synth 8-638] synthesizing module 'clkDiv' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'clkDiv' (12#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:23]
+INFO: [Synth 8-638] synthesizing module 'btnDebounce' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/btnDebounce.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'btnDebounce' (13#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/btnDebounce.sv:23]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/display.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'display' (14#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/display.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Basys' (15#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Basys.sv:23]
+WARNING: [Synth 8-3331] design display has unconnected port clk256
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[31]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[30]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[29]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[28]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[27]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[26]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[25]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[24]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[23]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[22]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[21]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[20]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[19]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[18]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[17]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[16]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[14]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[13]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[12]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[11]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[10]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[9]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[8]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[7]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[6]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[5]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[4]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[3]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[2]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[1]
+WARNING: [Synth 8-3331] design display has unconnected port clkcnt[0]
+WARNING: [Synth 8-3331] design Basys has unconnected port led[0]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[13]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[12]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[11]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[10]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[9]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[8]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[7]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[6]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[5]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[4]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[3]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[2]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[1]
+WARNING: [Synth 8-3331] design Basys has unconnected port switch[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.883 ; gain = 153.645
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 372.883 ; gain = 153.645
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc]
+Finished Parsing XDC File [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Basys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 669.922 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.922 ; gain = 450.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.922 ; gain = 450.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.922 ; gain = 450.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element InsOut_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:38]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv:33]
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:38]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 669.922 ; gain = 450.684
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DataReg__GB0  |           1|     42331|
+|2     |DataReg__GB1  |           1|     12166|
+|3     |SCPU__GC0     |           1|      1685|
+|4     |Basys__GC0    |           1|       451|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 144   
+	   2 Input      8 Bit        Muxes := 252   
+	  45 Input      8 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 16    
+	   5 Input      1 Bit        Muxes := 192   
+	   2 Input      1 Bit        Muxes := 252   
+	   4 Input      1 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Basys 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+Module DataReg 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 144   
+	   2 Input      8 Bit        Muxes := 252   
+	   4 Input      2 Bit        Muxes := 16    
+	   5 Input      1 Bit        Muxes := 192   
+	   2 Input      1 Bit        Muxes := 251   
+	   4 Input      1 Bit        Muxes := 64    
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module InsReg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---Muxes : 
+	  45 Input      8 Bit        Muxes := 4     
+Module Adder__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module Mux2to1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Extender 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+Module Mux2to1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module Mux2to1__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Mux2to1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module clkDiv 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module btnDebounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 5     
+Module display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "myALU/zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element myPC/curPC_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv:34]
+WARNING: [Synth 8-6014] Unused sequential element myClkDiv/cnt_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:38]
+WARNING: [Synth 8-3331] design Basys has unconnected port led[0]
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_99' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[0]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[1]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_98' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[1]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[2]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_97' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[2]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[3]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_96' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[3]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[4]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_95' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[4]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[5]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_94' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[5]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_93' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[6]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_92' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[7]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[8]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_91' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[8]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[9]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_90' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[9]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[10]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_89' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[10]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[11]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_88' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[11]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[12]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_87' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[12]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[13]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_86' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[13]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_85' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[14]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[15]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_84' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[15]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[16]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_83' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[16]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[17]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_82' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[17]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[18]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_81' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[18]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[19]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_80' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[19]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[20]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_79' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[20]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[21]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_78' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[21]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[22]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_77' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[22]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[23]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_76' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[23]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[24]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_75' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[24]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[25]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_74' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[25]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[26]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_73' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[26]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[27]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_72' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[27]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[28]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_71' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[28]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[29]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_70' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[29]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[30]'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_69' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[30]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (myDateRegi_1/DataOut_reg__0i_68)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (myDateRegi_1/\DataOut_retimed_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (mySCPUi_2/i_4/\myPC/curPC_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 669.922 ; gain = 450.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object         | Inference | Size (Depth x Width) | Primitives    | 
++------------+--------------------+-----------+----------------------+---------------+
+|Basys       | myRegister/Reg_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+--------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DataReg__GB0  |           1|      5280|
+|2     |DataReg__GB1  |           1|       833|
+|3     |SCPU__GC0     |           1|       874|
+|4     |Basys__GC0    |           1|       223|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 685.363 ; gain = 466.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 685.363 ; gain = 466.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DataReg__GB0  |           1|      5280|
+|2     |DataReg__GB1  |           1|       833|
+|3     |SCPU__GC0     |           1|       874|
+|4     |Basys__GC0    |           1|       223|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    22|
+|3     |LUT1   |    42|
+|4     |LUT2   |    43|
+|5     |LUT3   |   353|
+|6     |LUT4   |   190|
+|7     |LUT5   |   591|
+|8     |LUT6   |  1393|
+|9     |MUXF7  |   256|
+|10    |MUXF8  |   128|
+|11    |RAM32M |    12|
+|12    |FDCE   |     7|
+|13    |FDRE   |  2093|
+|14    |IBUF   |     5|
+|15    |OBUF   |    16|
+|16    |OBUFT  |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+------------+------+
+|      |Instance       |Module      |Cells |
++------+---------------+------------+------+
+|1     |top            |            |  5154|
+|2     |  myBtn        |btnDebounce |    14|
+|3     |  myClkDiv     |clkDiv      |    81|
+|4     |  myDisplay    |display     |    10|
+|5     |  mySCPU       |SCPU        |  5024|
+|6     |    jumpAdd    |Adder       |     2|
+|7     |    myALU      |ALU         |    42|
+|8     |    myDateReg  |DataReg     |  3006|
+|9     |    myPC       |PC          |  1565|
+|10    |    myPCAdd4   |Adder_0     |     3|
+|11    |    myRegister |Register    |   406|
++------+---------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 691.375 ; gain = 175.098
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 12 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+123 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 691.375 ; gain = 472.137
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1/Basys.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 691.375 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 26 08:07:45 2017...

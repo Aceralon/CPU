@@ -21,3 +21,5 @@
 *.bit
 !Inst.mem
 /CPU.sim/*
+*.dcp
+*.rpx
