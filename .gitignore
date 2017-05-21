@@ -23,3 +23,9 @@
 /CPU.sim/*
 *.dcp
 *.rpx
+*.rst
+*.vdi
+*.rpt
+*.html
+*.rlx
+*.prm
