@@ -51,7 +51,7 @@ module Basys(
     assign led[3] = reset;
     assign led[2] = btn[4];
     assign led[1] = btnIn[4];
-    assign clk = btn[0] | btn[4];
+    assign clk = btn[4];
 
     always_comb
     begin
@@ -63,7 +63,7 @@ module Basys(
         endcase
     end
 
-    SCPU mySCPU(
+    MCPU mySCPU(
         .clk(clk),
         .reset(reset),
         .curPC(curPC),

@@ -3,11 +3,11 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/04/17 20:57:06
+// Create Date: 2017/05/20 13:58:56
 // Design Name: 
-// Module Name: PC
+// Module Name: IR
 // Project Name: 
-// Target Devices: Basys 3
+// Target Devices: 
 // Tool Versions: 
 // Description: 
 // 
@@ -20,22 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PC(
+module IR(
     input  logic        clk,
-    input  logic [31:0] nextPC,
-    input  logic        PCWre,
-    input  logic        reset,
-    output logic [31:0] curPC
+    input  logic [31:0] in,
+    input  logic        IRWre,
+    output logic [31:0] out
     );
 
-    always_ff @ (negedge clk, negedge reset)
+    always_ff @ (posedge clk)
     begin
-        if(!reset)
-            curPC <= 32'b0;
-        else if(PCWre)
-            curPC <= nextPC;
+        if(IRWre)
+            out <= in;
         else
-            curPC <= curPC;
+            out <= out;
     end
-    
+
 endmodule

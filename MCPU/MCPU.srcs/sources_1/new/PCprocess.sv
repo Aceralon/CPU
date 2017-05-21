@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/04/19 21:09:39
+// Create Date: 2017/05/20 14:18:27
 // Design Name: 
-// Module Name: SIM
+// Module Name: PCprocess
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,28 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SIM(
+module PCprocess(
+    input  logic [25:0] prePC,
+    input  logic [3:0]  PC4,
+    output logic [31:0] outPC
     );
 
-    logic clk;
-    logic reset;
-
-    MCPU myCPU(
-        .clk(clk),
-        .reset(reset)
-    );
-    
-    always #30 clk = ~clk;
-
-    initial 
-    begin
-        clk = 1;
-        reset = 1;
-        #10
-        reset = 0;
-        #10
-
-        reset = 1;
-    end
+    assign outPC = {PC4, prePC, 2'b00};
 
 endmodule

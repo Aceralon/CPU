@@ -33,12 +33,18 @@ module ALU(
         case(ALUOp)
             3'b000 : result = ALUA + ALUB;
             3'b001 : result = ALUA - ALUB;
-            3'b010 : result = ALUB << ALUA;
-            3'b011 : result = ALUA | ALUB;
-            3'b100 : result = ALUA & ALUB;
-            3'b101 : result = ~ALUA & ALUB;
-            3'b110 : result = ALUA ^ ALUB;
-            3'b111 : result = ALUA ~^ ALUB;
+            3'b010 : result = ALUA < ALUB ? 1:0;
+            3'b011 :
+            begin
+                if(ALUA[31] > ALUB[31]) //a is negative $ b is positive
+                    result = 1;
+                else
+                    result = ALUA < ALUB ? 1:0;
+            end
+            3'b100 : result = ALUB << ALUA;
+            3'b101 : result = ALUA | ALUB;
+            3'b110 : result = ALUA & ALUB;
+            3'b111 : result = ALUA ^ ALUB;
         endcase
         if(result == 0)
             zero = 1;

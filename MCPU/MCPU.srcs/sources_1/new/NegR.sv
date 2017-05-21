@@ -3,11 +3,11 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/04/17 20:57:06
+// Create Date: 2017/05/20 14:15:02
 // Design Name: 
-// Module Name: PC
+// Module Name: NegR
 // Project Name: 
-// Target Devices: Basys 3
+// Target Devices: 
 // Tool Versions: 
 // Description: 
 // 
@@ -20,22 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PC(
+module NegR(
     input  logic        clk,
-    input  logic [31:0] nextPC,
-    input  logic        PCWre,
-    input  logic        reset,
-    output logic [31:0] curPC
+    input  logic [31:0] in,
+    output logic [31:0] out
     );
 
-    always_ff @ (negedge clk, negedge reset)
-    begin
-        if(!reset)
-            curPC <= 32'b0;
-        else if(PCWre)
-            curPC <= nextPC;
-        else
-            curPC <= curPC;
-    end
-    
+    always_ff @ (negedge clk)
+        out <= in;
+
 endmodule
