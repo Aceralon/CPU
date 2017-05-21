@@ -2,12 +2,12 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Wed Apr 26 08:06:35 2017
-# Process ID: 7216
-# Current directory: C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1
+# Start of session at: Sun May 21 13:44:16 2017
+# Process ID: 20732
+# Current directory: C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.runs/synth_1
 # Command line: vivado.exe -log Basys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Basys.tcl
-# Log file: C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1/Basys.vds
-# Journal file: C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1\vivado.jou
+# Log file: C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.runs/synth_1/Basys.vds
+# Journal file: C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Basys.tcl -notrace
 Command: synth_design -top Basys -part xc7a35ticpg236-1L
@@ -15,50 +15,76 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4816 
+INFO: Helper process launched with PID 11248 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 296.730 ; gain = 77.492
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 299.902 ; gain = 79.871
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Basys' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Basys.sv:23]
-INFO: [Synth 8-638] synthesizing module 'SCPU' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:22]
-INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'PC' (1#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv:23]
-INFO: [Synth 8-638] synthesizing module 'InsReg' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:23]
-INFO: [Synth 8-3876] $readmem data file 'Inst.mem' is read successfully [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:33]
-INFO: [Synth 8-256] done synthesizing module 'InsReg' (2#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:23]
-INFO: [Synth 8-638] synthesizing module 'Adder' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Adder.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'Adder' (3#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Adder.sv:23]
-INFO: [Synth 8-638] synthesizing module 'Mux2to1' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Mux2to1.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'Mux2to1' (4#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Mux2to1.sv:23]
-WARNING: [Synth 8-689] width (5) of port connection 'zero' does not match port width (32) of module 'Mux2to1' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:84]
-WARNING: [Synth 8-689] width (5) of port connection 'one' does not match port width (32) of module 'Mux2to1' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:85]
-INFO: [Synth 8-638] synthesizing module 'Register' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Register.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'Register' (5#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Register.sv:23]
-WARNING: [Synth 8-689] width (32) of port connection 'WriteReg' does not match port width (5) of module 'Register' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:94]
-INFO: [Synth 8-638] synthesizing module 'Extender' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Extender.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'Extender' (6#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Extender.sv:23]
-INFO: [Synth 8-638] synthesizing module 'CtrUnit' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/CtrUnit.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'CtrUnit' (7#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/CtrUnit.sv:23]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (8#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv:23]
-INFO: [Synth 8-638] synthesizing module 'ShifterL' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ShifterL.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'ShifterL' (9#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ShifterL.sv:23]
-INFO: [Synth 8-638] synthesizing module 'DataReg' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/DataReg.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Basys' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Basys.sv:23]
+INFO: [Synth 8-638] synthesizing module 'MCPU' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:22]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/PC.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'PC' (1#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/PC.sv:23]
+INFO: [Synth 8-638] synthesizing module 'InsReg' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/InsReg.sv:23]
+INFO: [Synth 8-3876] $readmem data file 'Inst.mem' is read successfully [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/InsReg.sv:33]
+INFO: [Synth 8-256] done synthesizing module 'InsReg' (2#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/InsReg.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Adder' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Adder.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Adder' (3#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Adder.sv:23]
+INFO: [Synth 8-638] synthesizing module 'IR' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/IR.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'IR' (4#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/IR.sv:23]
+INFO: [Synth 8-638] synthesizing module 'PCprocess' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/PCprocess.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'PCprocess' (5#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/PCprocess.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Mux4to1' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Mux4to1.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Mux4to1' (6#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Mux4to1.sv:23]
+WARNING: [Synth 8-689] width (5) of port connection 'one' does not match port width (32) of module 'Mux4to1' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:109]
+WARNING: [Synth 8-689] width (5) of port connection 'two' does not match port width (32) of module 'Mux4to1' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:110]
+WARNING: [Synth 8-350] instance 'writeRegSel' of module 'Mux4to1' requires 6 connections, but only 5 given [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+INFO: [Synth 8-638] synthesizing module 'Mux2to1' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Mux2to1.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Mux2to1' (7#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Mux2to1.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Register' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Register.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Register' (8#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Register.sv:23]
+WARNING: [Synth 8-689] width (32) of port connection 'WriteReg' does not match port width (5) of module 'Register' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:126]
+INFO: [Synth 8-638] synthesizing module 'Extender' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Extender.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Extender' (9#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Extender.sv:23]
+INFO: [Synth 8-638] synthesizing module 'CtrUnit' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/CtrUnit.sv:23]
+	Parameter Iadd bound to: 6'b000000 
+	Parameter Isub bound to: 6'b000001 
+	Parameter Iaddi bound to: 6'b000010 
+	Parameter Ior bound to: 6'b010000 
+	Parameter Iand bound to: 6'b010001 
+	Parameter Iori bound to: 6'b010010 
+	Parameter Isll bound to: 6'b011000 
+	Parameter Islt bound to: 6'b100110 
+	Parameter Isltu bound to: 6'b100111 
+	Parameter Isw bound to: 6'b110000 
+	Parameter Ilw bound to: 6'b110001 
+	Parameter Ibeq bound to: 6'b110100 
+	Parameter Ibne bound to: 6'b110101 
+	Parameter Ij bound to: 6'b111000 
+	Parameter Ijr bound to: 6'b111001 
+	Parameter Ijal bound to: 6'b111010 
+	Parameter Ihalt bound to: 6'b111111 
+INFO: [Synth 8-256] done synthesizing module 'CtrUnit' (10#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/CtrUnit.sv:23]
+INFO: [Synth 8-638] synthesizing module 'NegR' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/NegR.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'NegR' (11#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/NegR.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/ALU.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (12#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/ALU.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShifterL' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/ShifterL.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ShifterL' (13#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/ShifterL.sv:23]
+INFO: [Synth 8-638] synthesizing module 'DataReg' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/DataReg.sv:23]
 WARNING: [Synth 8-4767] Trying to implement RAM 'DataMem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM "DataMem_reg" dissolved into registers
-INFO: [Synth 8-256] done synthesizing module 'DataReg' (10#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/DataReg.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'SCPU' (11#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/SCPU.sv:22]
-INFO: [Synth 8-638] synthesizing module 'clkDiv' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'clkDiv' (12#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:23]
-INFO: [Synth 8-638] synthesizing module 'btnDebounce' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/btnDebounce.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'btnDebounce' (13#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/btnDebounce.sv:23]
-INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/display.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'display' (14#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/display.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'Basys' (15#1) [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/Basys.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DataReg' (14#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/DataReg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'MCPU' (15#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:22]
+INFO: [Synth 8-638] synthesizing module 'clkDiv' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/clkDiv.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'clkDiv' (16#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/clkDiv.sv:23]
+INFO: [Synth 8-638] synthesizing module 'btnDebounce' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/btnDebounce.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'btnDebounce' (17#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/btnDebounce.sv:23]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/display.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'display' (18#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/display.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'Basys' (19#1) [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/Basys.sv:23]
 WARNING: [Synth 8-3331] design display has unconnected port clk256
 WARNING: [Synth 8-3331] design display has unconnected port clkcnt[31]
 WARNING: [Synth 8-3331] design display has unconnected port clkcnt[30]
@@ -107,7 +133,7 @@ WARNING: [Synth 8-3331] design Basys has unconnected port switch[2]
 WARNING: [Synth 8-3331] design Basys has unconnected port switch[1]
 WARNING: [Synth 8-3331] design Basys has unconnected port switch[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.883 ; gain = 153.645
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 376.051 ; gain = 156.020
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -116,50 +142,102 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[31] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[30] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[29] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[28] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[27] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[26] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[25] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[24] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[23] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[22] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[21] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[20] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[19] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[18] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[17] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[16] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[15] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[14] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[13] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[12] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[11] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[10] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[9] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[8] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[7] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[6] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[5] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[4] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[3] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[2] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[1] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
+WARNING: [Synth 8-3295] tying undriven pin writeRegSel:three[0] to constant 0 [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/MCPU.sv:106]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 372.883 ; gain = 153.645
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 376.051 ; gain = 156.020
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc]
-Finished Parsing XDC File [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys_propImpl.xdc].
+Parsing XDC File [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/constrs_1/new/Con1.xdc]
+Finished Parsing XDC File [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/constrs_1/new/Con1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/constrs_1/new/Con1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Basys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 669.922 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 673.180 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.922 ; gain = 450.684
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 673.180 ; gain = 453.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.922 ; gain = 450.684
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 673.180 ; gain = 453.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 669.922 ; gain = 450.684
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 673.180 ; gain = 453.148
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "InsMem" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element InsOut_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/InsReg.sv:38]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/ALU.sv:33]
+WARNING: [Synth 8-6014] Unused sequential element InsOut_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/InsReg.sv:38]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'CtrUnit'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/CtrUnit.sv:67]
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/ALU.sv:33]
 INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:38]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/clkDiv.sv:38]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/CtrUnit.sv:67]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/CtrUnit.sv:67]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE4 |                              010 |                              101
+                 iSTATE1 |                              011 |                              010
+                 iSTATE2 |                              101 |                              011
+                 iSTATE3 |                              110 |                              100
+                 iSTATE5 |                              100 |                              110
+                 iSTATE6 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'CtrUnit'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/CtrUnit.sv:67]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 669.922 ; gain = 450.684
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 673.180 ; gain = 453.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -168,8 +246,8 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |1     |DataReg__GB0  |           1|     42331|
 |2     |DataReg__GB1  |           1|     12166|
-|3     |SCPU__GC0     |           1|      1685|
-|4     |Basys__GC0    |           1|       451|
+|3     |MCPU__GC0     |           1|      3209|
+|4     |Basys__GC0    |           1|       450|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -178,24 +256,26 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 	   3 Input     32 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 3     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input     32 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	                5 Bit    Registers := 5     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 1     
 	   8 Input     32 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 144   
 	   2 Input      8 Bit        Muxes := 252   
-	  45 Input      8 Bit        Muxes := 4     
+	  77 Input      8 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 16    
 	   5 Input      1 Bit        Muxes := 192   
 	   2 Input      1 Bit        Muxes := 252   
@@ -221,20 +301,24 @@ Detailed RTL Component Info :
 	   5 Input      1 Bit        Muxes := 192   
 	   2 Input      1 Bit        Muxes := 251   
 	   4 Input      1 Bit        Muxes := 64    
-Module PC 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
 Module InsReg 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 3     
 +---Muxes : 
-	  45 Input      8 Bit        Muxes := 4     
+	  77 Input      8 Bit        Muxes := 4     
 Module Adder__1 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
+Module IR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Mux4to1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
 Module Mux2to1__1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -243,7 +327,15 @@ Module Extender
 Detailed RTL Component Info : 
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
+Module CtrUnit 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input      3 Bit        Muxes := 1     
 Module Mux2to1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Mux2to1__3 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
@@ -252,18 +344,19 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     32 Bit       Adders := 1     
 +---XORs : 
-	   2 Input     32 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 1     
 +---Muxes : 
 	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module Adder 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-Module Mux2to1__3 
+Module Mux4to1 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
 Module Mux2to1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -308,9 +401,8 @@ INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "myALU/zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element myPC/curPC_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/PC.sv:34]
-WARNING: [Synth 8-6014] Unused sequential element myClkDiv/cnt_reg was removed.  [C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/sources_1/new/clkDiv.sv:38]
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element myClkDiv/cnt_reg was removed.  [C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/sources_1/new/clkDiv.sv:38]
 WARNING: [Synth 8-3331] design Basys has unconnected port led[0]
 INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_99' (FD_1) to 'myDateRegi_1/DataOut_reg__0i_68'
 INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[0]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[1]'
@@ -376,9 +468,8 @@ INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_reg__0i_69' (FD_1) t
 INFO: [Synth 8-3886] merging instance 'myDateRegi_1/DataOut_retimed_reg[30]' (FD_1) to 'myDateRegi_1/DataOut_retimed_reg[31]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (myDateRegi_1/DataOut_reg__0i_68)
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (myDateRegi_1/\DataOut_retimed_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (mySCPUi_2/i_4/\myPC/curPC_reg[0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 669.922 ; gain = 450.684
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 673.180 ; gain = 453.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -402,20 +493,20 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |1     |DataReg__GB0  |           1|      5280|
 |2     |DataReg__GB1  |           1|       833|
-|3     |SCPU__GC0     |           1|       874|
-|4     |Basys__GC0    |           1|       223|
+|3     |MCPU__GC0     |           1|      2273|
+|4     |Basys__GC0    |           1|       222|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 685.363 ; gain = 466.125
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 696.734 ; gain = 476.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 685.363 ; gain = 466.125
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 696.734 ; gain = 476.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,14 +515,24 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |1     |DataReg__GB0  |           1|      5280|
 |2     |DataReg__GB1  |           1|       833|
-|3     |SCPU__GC0     |           1|       874|
-|4     |Basys__GC0    |           1|       223|
+|3     |MCPU__GC0     |           1|      2273|
+|4     |Basys__GC0    |           1|       222|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_1_in[0]' (FDE) to 'mySCPU/myIR/out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_1_in[1]' (FDE) to 'mySCPU/myIR/out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_1_in[2]' (FDE) to 'mySCPU/myIR/out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_1_in[3]' (FDE) to 'mySCPU/myIR/out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_1_in[4]' (FDE) to 'mySCPU/myIR/out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_0_in[0]' (FDE) to 'mySCPU/myIR/out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_0_in[1]' (FDE) to 'mySCPU/myIR/out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_0_in[2]' (FDE) to 'mySCPU/myIR/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_0_in[3]' (FDE) to 'mySCPU/myIR/out_reg[24]'
+INFO: [Synth 8-3886] merging instance 'mySCPU/p_0_in[4]' (FDE) to 'mySCPU/myIR/out_reg[25]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -455,7 +556,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -468,7 +569,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -480,25 +581,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -515,18 +616,18 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    22|
-|3     |LUT1   |    42|
-|4     |LUT2   |    43|
-|5     |LUT3   |   353|
-|6     |LUT4   |   190|
-|7     |LUT5   |   591|
-|8     |LUT6   |  1393|
-|9     |MUXF7  |   256|
+|2     |CARRY4 |    36|
+|3     |LUT1   |    62|
+|4     |LUT2   |    93|
+|5     |LUT3   |   395|
+|6     |LUT4   |   272|
+|7     |LUT5   |   556|
+|8     |LUT6   |  1713|
+|9     |MUXF7  |   294|
 |10    |MUXF8  |   128|
 |11    |RAM32M |    12|
-|12    |FDCE   |     7|
-|13    |FDRE   |  2093|
+|12    |FDCE   |    35|
+|13    |FDRE   |  2268|
 |14    |IBUF   |     5|
 |15    |OBUF   |    16|
 |16    |OBUFT  |     1|
@@ -536,36 +637,42 @@ Report Instance Areas:
 +------+---------------+------------+------+
 |      |Instance       |Module      |Cells |
 +------+---------------+------------+------+
-|1     |top            |            |  5154|
+|1     |top            |            |  5888|
 |2     |  myBtn        |btnDebounce |    14|
 |3     |  myClkDiv     |clkDiv      |    81|
 |4     |  myDisplay    |display     |    10|
-|5     |  mySCPU       |SCPU        |  5024|
-|6     |    jumpAdd    |Adder       |     2|
-|7     |    myALU      |ALU         |    42|
-|8     |    myDateReg  |DataReg     |  3006|
-|9     |    myPC       |PC          |  1565|
-|10    |    myPCAdd4   |Adder_0     |     3|
-|11    |    myRegister |Register    |   406|
+|5     |  mySCPU       |MCPU        |  5759|
+|6     |    ADR        |NegR        |    41|
+|7     |    ALUR       |NegR_0      |  1490|
+|8     |    BDR        |NegR_1      |    32|
+|9     |    DBDR       |NegR_2      |    64|
+|10    |    jumpAdd    |Adder       |     8|
+|11    |    myALU      |ALU         |    12|
+|12    |    myCtrUnit  |CtrUnit     |    14|
+|13    |    myDateReg  |DataReg     |  3010|
+|14    |    myIR       |IR          |   610|
+|15    |    myPC       |PC          |   170|
+|16    |    myPCAdd4   |Adder_3     |    23|
+|17    |    myRegister |Register    |   285|
 +------+---------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 691.375 ; gain = 175.098
-Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 691.375 ; gain = 472.137
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 703.750 ; gain = 186.590
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 703.750 ; gain = 483.719
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 12 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
-  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
 
-123 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+144 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 691.375 ; gain = 472.137
-INFO: [Common 17-1381] The checkpoint 'C:/Users/aceralon/Documents/GitHub/CPU/CPU.runs/synth_1/Basys.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 691.375 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 26 08:07:45 2017...
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 703.750 ; gain = 483.719
+INFO: [Common 17-1381] The checkpoint 'C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.runs/synth_1/Basys.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 703.750 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 21 13:45:01 2017...

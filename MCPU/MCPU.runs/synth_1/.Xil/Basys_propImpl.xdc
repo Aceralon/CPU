@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/aceralon/Documents/GitHub/CPU/CPU.srcs/constrs_1/new/Con1.xdc rfile:../../../CPU.srcs/constrs_1/new/Con1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/acera/Documents/GitHub/CPU/MCPU/MCPU.srcs/constrs_1/new/Con1.xdc rfile:../../../MCPU.srcs/constrs_1/new/Con1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W4 [get_ports {posSeg[0]}]
 set_property src_info {type:XDC file:1 line:32 export:INPUT save:INPUT read:READ} [current_design]

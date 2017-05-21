@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "SIM_func_synth.v"
+sv xil_defaultlib  "../../../../CPU.srcs/sim_1/new/SIM.sv"
+sv xil_defaultlib  "../../../../CPU.srcs/sim_1/new/BasysSim.sv"
+
+# Do not sort compile order
+nosort

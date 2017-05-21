@@ -3,7 +3,6 @@
 *.wpc
 *.xml
 *.log
-*.wdb
 *.pb
 *.type
 *.xdbg
@@ -29,3 +28,6 @@
 *.html
 *.rlx
 *.prm
+*.sh
+*.wdb
+*.txt
