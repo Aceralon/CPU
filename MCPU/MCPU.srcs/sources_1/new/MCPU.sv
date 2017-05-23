@@ -107,8 +107,9 @@ module MCPU(
     Mux4to1 writeRegSel(
         .SelSig(RegDst),
         .zero(31),
-        .one(InsOut[20:16]),
-        .two(InsOut[15:11]),
+        .one({27'b0, InsOut[20:16]}),
+        .two({27'b0, InsOut[15:11]}),
+        .three(32'b0),
         .out(WriteReg)
     );
 
@@ -124,7 +125,7 @@ module MCPU(
         .RegWre(RegWre),
         .ReadReg1(InsOut[25:21]),
         .ReadReg2(InsOut[20:16]),
-        .WriteReg(WriteReg),
+        .WriteReg(WriteReg[4:0]),
         .WriteData(WriteData),
         .ReadData1(ReadData1),
         .ReadData2(ReadData2)
