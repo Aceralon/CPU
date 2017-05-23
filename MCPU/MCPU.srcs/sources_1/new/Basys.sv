@@ -44,6 +44,8 @@ module Basys(
     logic [4:0]  rs;
     logic [4:0]  rt;
 
+    logic [2:0]  nowState;
+
     logic [31:0] cnt;
 
     assign reset = ~btn[0];
@@ -55,11 +57,13 @@ module Basys(
 
     always_comb
     begin
-        case({switch[15], switch[14]})
-            2'b00 : dispContent <= {curPC[7:0], nextPC[7:0]};
-            2'b01 : dispContent <= {ALUResult[7:0], DataBus[7:0]};
-            2'b10 : dispContent <= {aluA[7:0], aluB[7:0]};
-            2'b11 : dispContent <= {3'b000, rs[4:0], 3'b000, rt[4:0]};
+        case(switch[15:13])
+            3'b000 : dispContent <= {curPC[7:0], nextPC[7:0]};
+            3'b001 : dispContent <= {ALUResult[7:0], DataBus[7:0]};
+            3'b010 : dispContent <= {aluA[7:0], aluB[7:0]};
+            3'b011 : dispContent <= {3'b000, rs[4:0], 3'b000, rt[4:0]};
+            3'b100 : dispContent <= {7'b0, nowState[2], 3'b0, nowState[1], 3'b0, nowState[0]};
+            default : dispContent <= 16'b0;
         endcase
     end
 
@@ -73,7 +77,8 @@ module Basys(
         .ALUA(aluA),
         .ALUB(aluB),
         .rs(rs),
-        .rt(rt)
+        .rt(rt),
+        .nowState(nowState)
     );
 
     clkDiv myClkDiv(

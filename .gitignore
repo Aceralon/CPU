@@ -34,3 +34,5 @@
 *.vds
 *.v
 *.js
+*.info
+*.ini

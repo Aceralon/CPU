@@ -41,7 +41,7 @@ module Register(
 
     always_ff @ (negedge clk)
     begin
-        if (RegWre)
+        if (RegWre && WriteReg != 0)
             Reg[WriteReg] <= WriteData;
     end
 

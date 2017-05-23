@@ -29,7 +29,8 @@ module MCPU(
     output logic [31:0] ALUA,      //alua
     output logic [31:0] ALUB,      //alub
     output logic [4:0]  rs,
-    output logic [4:0]  rt
+    output logic [4:0]  rt,
+    output logic [2:0]  nowState
     );
 
     logic [31:0] InsOut;
@@ -153,7 +154,8 @@ module MCPU(
         .ExtSel(ExtSel),
         .PCSrc(PCSrc),
         .RegDst(RegDst),
-        .ALUOp(ALUOp)
+        .ALUOp(ALUOp),
+        .state(nowState)
     );
 
     NegR ADR(

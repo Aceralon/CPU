@@ -38,11 +38,10 @@ module CtrUnit(
     output logic       ExtSel,
     output logic [1:0] PCSrc,
     output logic [1:0] RegDst,
-    output logic [2:0] ALUOp
+    output logic [2:0] ALUOp,
+    output logic [2:0] state
     );
-
-    logic [2:0] state;
-
+    
     parameter [5:0] Iadd  = 6'b000000,
                     Isub  = 6'b000001,
                     Iaddi = 6'b000010,
